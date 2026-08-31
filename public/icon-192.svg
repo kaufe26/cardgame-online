@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="100" fill="url(#bgGrad)" />
+  <rect x="36" y="36" width="440" height="440" rx="80" fill="#0f172a" fill-opacity="0.85" stroke="url(#goldGrad)" stroke-width="12" />
+  
+  <g transform="translate(116, 76)">
+    <rect x="0" y="0" width="280" height="360" rx="28" fill="#0f172a" stroke="url(#goldGrad)" stroke-width="10" />
+    <rect x="18" y="18" width="244" height="44" rx="14" fill="url(#goldGrad)" />
+    <text x="140" y="47" font-family="system-ui, sans-serif" font-size="20" font-weight="900" text-anchor="middle" fill="#78350f">CARD FORGE 3D</text>
+    
+    <circle cx="140" cy="165" r="75" fill="#3b82f6" stroke="#60a5fa" stroke-width="6" />
+    <polygon points="145,105 110,165 138,165 130,225 175,155 145,155" fill="#fef08a" stroke="#ca8a04" stroke-width="3" />
+    
+    <rect x="24" y="260" width="232" height="72" rx="14" fill="#1e293b" stroke="#3b82f6" stroke-width="3" />
+    <text x="40" y="288" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#38bdf8">KIDS 3D</text>
+    <text x="40" y="312" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1">TCG MAKER</text>
+  </g>
+</svg>

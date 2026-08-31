@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, .font-heading {
+    font-family: 'Fredoka', 'Plus Jakarta Sans', cursive, sans-serif;
+  }
+
+  .font-display {
+    font-family: 'Titan One', 'Bungee', 'Fredoka', cursive, sans-serif;
+  }
+}
+
+/* 3D Card & Perspective Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Holographic Foil Shimmer Effect */
+.holo-foil {
+  position: relative;
+  overflow: hidden;
+}
+
+.holo-foil::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.25) 30%,
+    rgba(255, 215, 0, 0.3) 38%,
+    rgba(236, 72, 153, 0.35) 45%,
+    rgba(59, 130, 246, 0.35) 52%,
+    rgba(34, 197, 94, 0.3) 60%,
+    rgba(255, 255, 255, 0.2) 68%,
+    transparent 80%
+  );
+  transform: rotate(-25deg) translateY(-100%);
+  animation: foilShimmer 6s infinite linear;
+  pointer-events: none;
+  mix-blend-mode: color-dodge;
+  opacity: 0.6;
+}
+
+@keyframes foilShimmer {
+  0% {
+    transform: rotate(-25deg) translateY(-120%);
+  }
+  50% {
+    transform: rotate(-25deg) translateY(120%);
+  }
+  100% {
+    transform: rotate(-25deg) translateY(120%);
+  }
+}
+
+/* Print Styles for A4 Paper with Cut Marks */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 10mm;
+    margin: 0 auto;
+    page-break-after: always;
+    box-sizing: border-box;
+    display: grid;
+    background: white !important;
+  }
+
+  .cut-marks {
+    border: 1px dashed #94a3b8;
+  }
+}

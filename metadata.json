@@ -1,0 +1,6 @@
+{
+  "name": "CARD FORGE KIDS 3D",
+  "description": "Gerador de cards de personagens em estilo infantil 3D para jogos de tabuleiro com modo batalha interativo, frente e verso e exportação para impressão.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
